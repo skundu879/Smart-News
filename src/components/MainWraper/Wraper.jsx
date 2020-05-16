@@ -83,7 +83,7 @@ ScrollTop.propTypes = {
 //API CALL for fetching the news data.
 const useFetch = (NewsUrl) => {
   const [Data, setData] = useState([]);
-  const [loading, setloading] = useState(true);
+  const [loading, setloading] = useState(false);
   useEffect(() => {
     setloading(true);
     axios
@@ -104,9 +104,9 @@ const useFetch = (NewsUrl) => {
 export default function Wraper(props) {
   const classes = useStyles();
   const initialurl =
-    "http://newsapi.org/v2/top-headlines?country=in&category=health&language=en&apiKey=17f0a6b07ffe4ae69b8279f1ddd35d9b";
+    "https://newsapi.org/v2/top-headlines?country=in&category=health&language=en&apiKey=17f0a6b07ffe4ae69b8279f1ddd35d9b";
 
-  const partUrl1 = "http://newsapi.org/v2/top-headlines?country=";
+  const partUrl1 = "https://newsapi.org/v2/top-headlines?country=";
   const partUrl2 = "&category=";
   const partUrl3 = "&language=en&apiKey=17f0a6b07ffe4ae69b8279f1ddd35d9b";
   const [NewsUrl, setNewsUrl] = useState(initialurl);
