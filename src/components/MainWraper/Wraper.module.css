@@ -1,0 +1,39 @@
+.appbar {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+}
+.menuButton {
+  display: grid;
+  justify-content: start;
+  align-content: center;
+}
+.country {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  justify-content: end;
+  align-content: center;
+  float: left !important;
+}
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 680px) {
+  .country {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 5px;
+    margin: 5% 0 !important;
+  }
+  .container {
+    display: grid;
+    align-items: center;
+    justify-content: center !important;
+    grid-template-columns: 1fr;
+  }
+}
