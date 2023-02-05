@@ -3,6 +3,7 @@ import TextField from "@material-ui/core/TextField";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 
 export default function ComboBox({ handelCatagorychange }) {
+  console.log(handelCatagorychange);
   return (
     <Autocomplete
       size="small"
